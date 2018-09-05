@@ -1,0 +1,1 @@
+web: gunicorn IndiaPincode.wsgi --log-file -
