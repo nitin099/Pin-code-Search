@@ -25,7 +25,7 @@ SECRET_KEY = '09l3p+co)d)#ld=l&i@9p%makm8!5=8)7gu$$ko--=ose5+%+8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ "india-pincodesearch.herokuapp.com"]
 
 
 # Application definition
