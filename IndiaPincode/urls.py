@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
 from PincodeSearch.views import home, search
@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/$', home),
     url(r'^$', search),
+    url(r'^api/pincode/', include(("PincodeSearch.api.urls"), namespace='PincodeSearch-api')),
 ]
