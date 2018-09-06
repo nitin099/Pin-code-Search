@@ -13,15 +13,3 @@ class PinCode(models.Model):
     Taluk = models.CharField(max_length=120, blank=True)
     district = models.CharField(max_length=120, blank=True)
     state_name =  models.CharField(max_length=120, blank=True)
-
-
-    def __str__(self):
-    	return self.place
-
-
-class StateCode(models.Model):
-    state = models.CharField(max_length=120, blank=True)
-    code  = models.CharField(max_length=120, blank=True)
-
-    def __str__ (self):
-    	return self.state

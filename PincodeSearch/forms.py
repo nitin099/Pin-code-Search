@@ -1,5 +1,5 @@
 from django import forms
-from .models import PinCode, StateCode
+from .models import PinCode
 
 
 class PincodeForm(forms.ModelForm):
@@ -7,11 +7,6 @@ class PincodeForm(forms.ModelForm):
         model = PinCode
         fields = '__all__'
 
-    state = forms.ModelChoiceField(
-        widget=forms.Select,
-        queryset=StateCode.objects.all(),
-        )
-    
     place = forms.ModelChoiceField(
         widget=forms.Select,
         queryset=PinCode.objects.all(),

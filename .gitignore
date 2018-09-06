@@ -3,10 +3,9 @@ venv
 *.pyc
 staticfiles
 .env
+All_India_pincode_data_26022018.csv
+PincodeSearch/utility.py
 
-IndiaPincode/settings/local.py
-
-tiny/settings/local.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
