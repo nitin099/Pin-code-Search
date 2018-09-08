@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '09l3p+co)d)#ld=l&i@9p%makm8!5=8)7gu$$ko--=ose5+%+8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [ "india-pincodesearch.herokuapp.com"]
+ALLOWED_HOSTS = ["*"]                      # india-pincodesearch.herokuapp.com
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'PincodeSearch',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [

@@ -20,7 +20,9 @@ from PincodeSearch.views import home, search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/$', home),
-    url(r'^$', search),
-    url(r'^api/pincode/', include(("PincodeSearch.api.urls"), namespace='PincodeSearch-api')),
+    url(r'^home/$', home, name="search_pincode"),
+    url(r'^$', search, name='home'),
+    url(r'^api/pincode/', include("PincodeSearch.api.urls", namespace='PincodeSearch-api')),
 ]
+
+# urlpatterns = format_suffix_patterns(urlpatterns)
