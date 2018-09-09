@@ -5,7 +5,7 @@ from rest_framework.generics import (
 	)
 from django.db.models import Q
 from PincodeSearch.models import PinCode
-from .serializers import PinCodeSerializer, PinCodeCreateSerializer
+from .serializers import PinCodeSerializer
 
 
 class PinCodeCreateAPIView(CreateAPIView):

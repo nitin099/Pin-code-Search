@@ -122,7 +122,7 @@ class ViewTestCase(TestCase):
 	def test_api_can_get_details(self):
 
 		"""
-		Test the api can get a pincode.
+		Test the api can get a pincode details.
 		"""
 
 		pincode_data = self.setUp()

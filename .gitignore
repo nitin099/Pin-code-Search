@@ -6,6 +6,9 @@ staticfiles
 All_India_pincode_data_26022018.csv
 PincodeSearch/utility.py
 
+
+htmlcov
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
