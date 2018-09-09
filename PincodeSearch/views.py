@@ -21,6 +21,7 @@ def search(request):
 	queryset_list = PinCode.objects.all()
 	query = request.GET.get("q")
 	if query:
+		query = query.strip()
 		queryset = queryset_list.filter(
 			Q(pincode__icontains=query)|
 			Q(place__icontains=query)|
@@ -38,7 +39,7 @@ def search(request):
 	return render(request, "searchpincode.html", context)
 
 
-# This view uses api to search pincodes
+# This view uses api to get pincodes.
 
 # def search(request):
 # 	form = SearchForm(request.POST or None)
@@ -65,4 +66,3 @@ def search(request):
 # 		except:
 # 			return render(request, "searchpincode.html", {"invalid":"Invalid Pincode"})
 # 	return render(request,'searchpincode.html', {"form": form})
-
