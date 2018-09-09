@@ -22,14 +22,14 @@ class PinCodeDetailAPIView(RetrieveAPIView):
 class PinCodeDeleteAPIView(DestroyAPIView):
 	queryset = PinCode.objects.all()
 	serializer_class = PinCodeSerializer
-	# lookup_field  = 'place'
+	# lookup_field  = 'pk'
 	#lookup_url_kwarg = "abc"
 
 
 class PinCodeUpdateAPIView(UpdateAPIView):
 	queryset = PinCode.objects.all()
 	serializer_class = PinCodeSerializer
-	# lookup_field  = 'pincode'
+	# lookup_field  = 'pk'
 	#lookup_url_kwarg = "abc"
 
 
