@@ -23,8 +23,8 @@ def search(request):
 	if query:
 		queryset = queryset_list.filter(
 			Q(pincode__icontains=query)|
-			Q(place__iexact=query)|
-			Q(district__iexact=query)|
+			Q(place__icontains=query)|
+			Q(district__icontains=query)|
 			Q(state_name__icontains=query)
 			).distinct()
 		context = {
