@@ -30,6 +30,8 @@
                   <th>Division Name</th>
                 </tr>
               </thead>
+              {% else %}
+                <h1> {{ not_found }} </h1>
         {% endif %}
               {% for i in queryset %}
               <tbody>

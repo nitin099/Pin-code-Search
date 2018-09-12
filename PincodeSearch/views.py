@@ -17,6 +17,7 @@ def home(request):
 
 
 def search(request):
+	not_found = "No results found"
 	form = PincodeForm(request.POST or None)
 	queryset_list = PinCode.objects.all()
 	query = request.GET.get("q")
@@ -30,7 +31,8 @@ def search(request):
 			).distinct()
 		context = {
 			"form": form,
-			"queryset": queryset
+			"queryset": queryset,
+			"not_found": not_found
 		}
 		return render(request, "searchpincode.html", context)
 	context ={
