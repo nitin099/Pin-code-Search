@@ -114,7 +114,7 @@ class ViewTestCase(TestCase):
 
 		response = self.client.post(
 			reverse('PincodeSearch-api:create'),
-			self.create_pincode, format='json'
+			self.create_pincode
 			)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
@@ -164,5 +164,4 @@ class ViewTestCase(TestCase):
 				format='json',
 				follow=True
 				)
-
 		self.assertEquals(response.status_code, status.HTTP_204_NO_CONTENT)
